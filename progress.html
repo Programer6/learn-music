@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Progress | Music Theory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css"> 
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+</head>
+<body class="progress-body">
+
+    <header>
+        <div class="logo">
+            <img src="images/music-note.png" alt="Logo" class="main-logo" onerror="this.style.display='none'">
+            <span style="font-family:'Archivo Black'; color:white; font-size:1.5rem; margin-left:10px;">THEORY HUB</span>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="practice.html" class="nav-btn">Practice</a>
+            <a href="progress.html" class="nav-btn active">Progress</a>
+        </nav>
+    </header>
+<center>
+    <main class="progress-page-wrapper">
+        
+        <section class="streak-panel">
+            <h2 class="streak-title">Streak Counter</h2>
+            <div class="streak-display">
+                <div class="fire-anim">🔥</div>
+                <div class="streak-count">1 day</div>
+            </div>
+            <p class="streak-sub">Keep the flame alive!</p>
+        </section>
+
+        <section class="motivation-container">
+            <button id="motivate-btn" class="block-btn">BOOST MOTIVATION</button>
+            <p id="motivation-text" class="hidden-msg"></p>
+        </section>
+    </center>
+
+        <!-- Orchestra Map Section -->
+        <section class="orchestra-section">
+            <h3 class="section-header">Explore the Orchestra</h3>
+            <p class="instruction">Click on an instrument to learn its secrets.</p>
+            
+            <div class="map-wrapper">
+                <!-- Ensure this image is in the same folder as your HTML files -->
+                <img src="images/instruments_orchestra.png" usemap="#image-map" alt="Orchestra Map" style="min-width: 850px; max-width: 100%;">
+
+                <map name="image-map">
+                    <area href="https://philharmonia.co.uk/resources/instruments/violin" alt="Violins" title="Violins" coords="259,420,106" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/viola" alt="Violas" title="Violas" coords="592,444,394,348" shape="rect" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/bassoon" alt="Bassoons" title="Bassoons" coords="564,313,38" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/oboe" alt="Oboes" title="Oboes" coords="490,305,35" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/flute" alt="Flutes" title="Flutes" coords="341,293,450,345" shape="rect" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/horn" alt="French Horn" title="French Horn" coords="312,222,431,278" shape="rect" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/harp" alt="Harp" title="Harp" coords="40,418,105,544" shape="rect" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/timpani" alt="Timpani" title="Timpani" coords="222,173,280,257" shape="rect" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/tam-tam" alt="Gong" title="Gong" coords="392,116,458,182" shape="rect" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/tubular-bells" alt="Tubular Bells" title="Tubular Bells" coords="486,114,536,188" shape="rect" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/triangle" alt="Triangle" title="Triangle" coords="683,157,734,249" shape="rect" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/trumpet" alt="Trumpet" title="Trumpet" coords="443,204,531,264" shape="rect" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/trombone" alt="Trombones" title="Trombones" coords="581,244,32" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/tuba" alt="Tubas" title="Tubas" coords="673,278,36" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/clarinet" alt="Clarinets" title="Clarinets" coords="633,344,35" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/double-bass" alt="Double Bass" title="Double Bass" coords="799,453,69" shape="circle" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/bass-drum" alt="Bass Drum" title="Bass Drum" coords="340,174,35" shape="circle" target="_blank">
+                    <area href="https://philharmonia.co.uk/resources/instruments/cello" alt="Cellos" title="Cellos" coords="659,477,71" shape="circle" target="_blank">
+                    <area href="https://www.sfskids.org/instruments/xylophone" alt="Xylophone" title="Xylophone" coords="613,166,44" shape="circle" target="_blank">
+                </map>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-instruments">
+            <img src="images/Violin-icon.png" alt="sep">
+            <img src="images/french-horn.png" alt="sep">
+            <img src="images/Piano.icon.png" alt="sep">
+            <img src="images/Guitar-icon.png" alt="sep">
+            <img src="images/trumpet-icon.png" alt="sep">
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p>Learn Music theory through interactive gameplay designed for students.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <span>FB</span> <span>X</span> <span>IG</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
