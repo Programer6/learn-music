@@ -1,0 +1,309 @@
+/* --- High-Energy Gamer Practice Styles --- */
+
+body {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    background: linear-gradient(135deg, #2b4df5 0%, #27e9df 50%, #40cffd 100%);
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Hub / Selection Screen */
+.hub-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #191e44;
+    margin-bottom: 50px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.mode-card {
+    background: #191e44;
+    border-radius: 25px;
+    padding: 40px;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.mode-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    border-color: #14e6e1;
+    box-shadow: 0 20px 50px rgba(20, 230, 225, 0.4);
+}
+
+.mode-card img {
+    height: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px #14e6e1);
+}
+
+/* Game Arena Layout */
+.game-container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: rgba(25, 30, 68, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+/* The Staff Display - DO NOT CHANGE HEIGHT/MARGINS */
+.staff-display {
+    background: #0d1117; 
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    border: 3px solid #14e6e1;
+    margin: 30px 0;
+    box-shadow: inset 0 0 30px rgba(20, 230, 225, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.staff-lines {
+    width: 85%;
+    margin-top: 100px; /* Aligns with JS coordinates */
+}
+
+.line {
+    border-top: 2px solid #14e6e1;
+    height: 30px; /* Critical for 15px spacing math */
+    opacity: 0.8;
+    box-sizing: border-box;
+}
+
+.note-head {
+    width: 38px;
+    height: 28px; /* Fixed height for centering */
+    background: #14e6e1;
+    border-radius: 50%;
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #14e6e1;
+    z-index: 10;
+    transition: top 0.2s ease-out;
+}
+
+.ledger-line {
+    width: 55px;
+    height: 3px;
+    background: #14e6e1;
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #14e6e1;
+    z-index: 5;
+}
+
+.treble-clef {
+    position: absolute;
+    left: 30px;
+    top: 75px;
+    height: 165px;
+    pointer-events: none;
+}
+
+/* UI Elements */
+.progress-container {
+    width: 100%;
+    max-width: 400px;
+    height: 22px;
+    background: #ffe7c8; 
+    border-radius: 11px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%; height: 100%;
+    background: #ff8c00;
+    transition: width 0.4s ease;
+}
+
+.score-badge {
+    background: #14e6e1;
+    color: #191e44;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: 'Archivo Black', sans-serif;
+    display: inline-block;
+}
+
+.game-btn {
+    background: #14e6e1;
+    color: #191e44;
+    border: none;
+    padding: 18px 30px;
+    border-radius: 15px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #088a87;
+    margin: 8px;
+    transition: 0.1s;
+}
+
+.game-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #088a87;
+}
+
+/* Feedback Animations */
+.shake { animation: shakeAnim 0.4s; }
+@keyframes shakeAnim {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.flash { background-color: rgba(255, 255, 255, 0.1) !important; }
+/* --- PROGRESS PAGE STYLES --- */
+
+/* Renamed from .progress-container to avoid conflict */
+div.progress-page-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    /* Ensure it is visible */
+    display: block;
+    min-height: 500px; 
+}
+
+/* Streak Panel */
+.streak-panel {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 400px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 4px solid #d1d1d1;
+    color: #333;
+}
+
+.streak-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.streak-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fire-anim {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 10px orange);
+    animation: pulseFire 1.5s infinite alternate;
+}
+
+.streak-count {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #191e44;
+}
+
+@keyframes pulseFire {
+    from { transform: scale(1); filter: drop-shadow(0 0 5px orange); }
+    to { transform: scale(1.1); filter: drop-shadow(0 0 20px red); }
+}
+
+/* Motivation Section */
+.motivation-container {
+    margin-bottom: 60px;
+}
+
+.block-btn {
+    background: #FF4757;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 #bf1f2e;
+    cursor: pointer;
+    transition: 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.block-btn:active {
+    transform: translateY(8px);
+    box-shadow: none;
+}
+
+.hidden-msg {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    min-height: 30px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Orchestra Map Section */
+.orchestra-section {
+    background: rgba(25, 30, 68, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.1);
+    margin-bottom: 50px;
+}
+
+.section-header {
+    font-family: 'Archivo Black';
+    color: #14e6e1;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.instruction {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Horizontal scroll wrapper for map */
+.map-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 3px solid #14e6e1;
+    background: white;
+}
+
+.map-wrapper img {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Training | Music Theory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+</head>
+<body class="game-body">
+
+    <div class="game-container">
+        <div class="game-header">
+            <button class="game-btn" onclick="goBack()" style="font-size: 1rem; padding: 10px;">← Hub</button>
+            <div class="score-badge">Score: <span id="score-val">0</span></div>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-fill"></div>
+        </div>
+
+        <h2 style="font-family: 'Archivo Black'; color: #14e6e1;">What is the Interval?</h2>
+
+        <div id="display-area" class="staff-display">
+            <img src="treble-clef.png" class="treble-clef" alt="Clef">
+            <div class="staff-lines">
+                <div class="line"></div><div class="line"></div>
+                <div class="line"></div><div class="line"></div>
+                <div class="line"></div>
+            </div>
+            
+            <!-- Note 1 (Left) -->
+            <div id="note-1" class="note-head interval-note-left"></div>
+            <div id="ledger-1" class="ledger-line interval-ledger-left"></div>
+
+            <!-- Note 2 (Right) -->
+            <div id="note-2" class="note-head interval-note-right"></div>
+            <div id="ledger-2" class="ledger-line interval-ledger-right"></div>
+        </div>
+
+        <!-- Interval Buttons -->
+        <div class="button-row">
+            <button class="game-btn" onclick="checkInterval('2nd')">2nd</button>
+            <button class="game-btn" onclick="checkInterval('3rd')">3rd</button>
+            <button class="game-btn" onclick="checkInterval('4th')">4th</button>
+            <button class="game-btn" onclick="checkInterval('5th')">5th</button>
+            <button class="game-btn" onclick="checkInterval('6th')">6th</button>
+            <button class="game-btn" onclick="checkInterval('7th')">7th</button>
+            <button class="game-btn" onclick="checkInterval('8ve')">8ve</button>
+        </div>
+    </div>
+
+    <script src="practice.js"></script>
+    <script>
+        window.onload = () => nextInterval();
+
+        function checkInterval(guess) {
+            checkAnswer(guess, 'interval');
+        }
+    </script>
+</body>
+</html>

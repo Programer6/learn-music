@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Identify Note Names</title>
+    <link rel="stylesheet" href="style.css"> <!-- For Nav -->
+    <link rel="stylesheet" href="practice.css"> <!-- For Game UI -->
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+</head>
+<body class="game-body">
+
+    <div class="game-container">
+        <div class="game-header">
+            <button class="game-btn" onclick="goBack()" style="font-size: 1rem; padding: 10px;">← Back</button>
+            <div class="score-badge">Score: <span id="score-val">0</span></div>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-fill"></div>
+        </div>
+
+        <div class="staff-display">
+            <img src="images/trebel-clef.png" class="treble-clef" style="position:absolute; left:20px; top:40px; height:150px;">
+            <div class="staff-lines">
+                <div class="line"></div><div class="line"></div>
+                <div class="line"></div><div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="note-head" class="note-head"></div>
+            <div id="ledger-line" class="ledger-line"></div>
+        </div>
+
+        <div class="button-row">
+            <button class="game-btn" onclick="checkAnswer('A', 'note')">A</button>
+            <button class="game-btn" onclick="checkAnswer('B', 'note')">B</button>
+            <button class="game-btn" onclick="checkAnswer('C', 'note')">C</button>
+            <button class="game-btn" onclick="checkAnswer('D', 'note')">D</button>
+            <button class="game-btn" onclick="checkAnswer('E', 'note')">E</button>
+            <button class="game-btn" onclick="checkAnswer('F', 'note')">F</button>
+            <button class="game-btn" onclick="checkAnswer('G', 'note')">G</button>
+        </div>
+    </div>
+
+    <script src="practice.js"></script>
+    <script>
+        // Start the game immediately on load
+        window.onload = () => nextQuestion('note');
+    </script>
+</body>
+</html>

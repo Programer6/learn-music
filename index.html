@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/music-note.png" alt="Logo" class="main-logo">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-btn active">Home</a>
+            <a href="practice.html" class="nav-btn">Practice</a>
+            <a href="progress.html" class="nav-btn">Progress</a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <img src="images/Violin-icon.png" class="floating-img violin" alt="Violin">
+        <img src="images/Piano.icon.png" class="floating-img piano" alt="Piano">
+        <img src="images/Trumpet-icon.png" class="floating-img trumpet" alt="Trumpet">
+        <img src="images/Guitar-icon.png" class="floating-img guitar" alt="Guitar">
+        <img src="images/french-horn.png" class="floating-img french-horn" alt="French Horn">
+
+        <div class="hero-content">
+            <h1>Learn Music. <br><span class="highlight">Build Confidence</span></h1>
+            <p class="slogan">Master theory with a gamer-inspired journey.</p>
+            <button class="cta-btn">Start your journey now!</button>
+        </div>
+
+        <div class="feature-container">
+            <div class="cards-wrapper">
+                <div class="card">
+                    <img src="images/game-icon.png" class="card-icon" alt="Game Icon">
+                    <p>Practice Music Theory</p>
+                </div>
+                <div class="card">
+                    <img src="images/document-icon.png" class="card-icon" alt="Document Icon">
+                    <p>See Progress Over time!</p>
+                </div>
+            </div>
+            <div class="record-image-wrapper">
+                <img src="images/CD-holding.png" class="record-holder" alt="Person holding record">
+            </div>
+        </div>
+    </main>
+
+    <div class="wave-container">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L1440 40V0H0V120Z" fill="#89BAFB" opacity="0.5"/>
+            <path d="M0 80L1440 0V120H0V80Z" fill="#DCF5FF"/>
+        </svg>
+    </div>
+
+    <section class="how-it-works-section">
+        <div class="how-it-works-content">
+            <h3>How it works?</h3>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="step">
+                    <div class="step-box">Step 1: Select your weakness</div>
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="step-box">Step 2: Practice music theory</div>
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="step-box">Step 3: Improve!</div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/img1.jpg" style="width:100%" alt="Showcase 1">
+                <div class="text">Interactive Practice Interface</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/img2.jpg" style="width:100%" alt="Showcase 2">
+                <div class="text">Real-time Feedback</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/img3.jpg" style="width:100%" alt="Showcase 3">
+                <div class="text">Track Your Mastery</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dot-navigation">
+            <span class="dot-slide" onclick="currentSlide(1)"></span>
+            <span class="dot-slide" onclick="currentSlide(2)"></span>
+            <span class="dot-slide" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h2 class="section-title">Why Master Theory?</h2>
+        
+        <div class="accordion-container">
+            
+            <button class="accordion-btn">
+                Why is learning music theory important?
+                <span class="icon">+</span>
+            </button>
+            <div class="accordion-panel">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.Hx6aTrs2Mqd-1H5fxursjgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Musician reading sheet music" class="panel-image">
+                <p>Music theory is the language of musicians. While you can learn to play by ear, understanding the theory allows you to communicate with other musicians, compose your own songs, and memorize pieces much faster. It transforms you from a mechanical player into a true artist who understands the "why" behind the notes.</p>
+            </div>
+
+            <button class="accordion-btn">
+                The struggle with reading sheet music
+                <span class="icon">+</span>
+            </button>
+            <div class="accordion-panel">
+                <p>Many students rely solely on muscle memory or finger numbers, avoiding the actual reading of notes. This creates a "glass ceiling" in their progress. Without the competence to read sheet music fluently, students struggle to learn new pieces independently, leading to frustration and often causing them to quit before reaching their full potential.</p>
+            </div>
+
+            <button class="accordion-btn">
+                How does this platform help performance?
+                <span class="icon">+</span>
+            </button>
+            <div class="accordion-panel">
+                <p>By gamifying the repetitive aspects of note naming, rhythm, and intervals, we remove the boredom from the basics. This builds instantaneous recognition (sight-reading) skills. When you don't have to think about <em>what</em> the note is, you can focus 100% of your energy on <em>how</em> to play it beautifully, drastically improving performance confidence.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Based on Design 3 & Footer Image) -->
+    <footer>
+        <div class="footer-instruments">
+            <img src="images/Violin-icon.png" alt="sep">
+            <img src="images/french-horn.png" alt="sep">
+            <img src="images/Piano.icon.png" alt="sep">
+            <img src="images/Guitar-icon.png" alt="sep">
+            <img src="images/trumpet-icon.png" alt="sep">
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p>Learn Music theory through interactive gameplay designed for students.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <span>FB</span> <span>X</span> <span>IG</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
